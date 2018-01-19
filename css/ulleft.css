@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* 第一層 UL class*/
+#vertnav{
+  list-style: none;
+  margin: 0px;
+  padding:0;
+}
+/*第二層 UL class*/
+#vertnav ul {
+  margin:0;
+  list-style: none;
+  z-index:999;
+  overflow:visible;
+  position:absolute;
+}
+#vertnav li {
+  position: relative;
+  /*display:inline;*//*20100110*/
+  display:block;/*20100110*/
+  margin:0;
+  clear: both;
+}
+
+#vertnav li a {/*20100110*/
+  display:block;
+}
+
+#vertnav ul,
+#vertnav ul ul {
+  display:none;
+  position:absolute;
+  top:0px;
+  left:100px;
+  *left:138px;
+}
+
+/*設定跳出選單的位置*/
+/*
+html > body #vertnav ul{
+left:100px;}
+*+html > body #vertnav ul{
+left:138px;}
+
+html > body #vertnav ul ul{
+left:138px;}
+*/
+#vertnav li:hover ul ul {
+  display:none;
+}
+
+#vertnav li:hover ul,
+#vertnav ul li:hover ul{
+  display:block;
+}
+
+HTML>BODY li>ul {
+  top: auto;
+  left: auto;
+}
+/* Win IE only \*/
+* html #vertnav li{
+  float:left;
+} 
+/* end holly hack */

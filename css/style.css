@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url("ulleft.css");
+@import url("i_thumbnail.css");
+
+#vertnav li a {
+  display: block;
+  background: url(../images/icom_menu_a01.gif) no-repeat 5px 15px;
+
+  /*width: 132px;*/
+  margin: 0px;
+  padding: 8px 5px 4px 12px;
+  border-bottom: 1px dotted #848484;	
+
+  text-decoration: none;
+  text-align: left;
+  font-size: 15px;
+  /*font-family: "‧s2?(C)???";*//*20100110*/
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 120%;
+  letter-spacing: 0.06em;
+  color: #333;}
+html>body #vertnav li a {
+  /*width: 120px;*/
+  letter-spacing: 0.03em;}		
+#vertnav li a:hover {
+  color: #792503;
+  text-decoration: none;
+  background: url(../images/icom_menu_a02.gif) no-repeat 5px 15px;
+}
+
+#vertnav li li a {
+  letter-spacing: 0.06em;
+  width: 150px;
+  text-align: left;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px dotted #CCC;
+  color: #08536A;
+  font-size: 13px;
+  line-height: 150%;
+  /*font-family: "‧s2?(C)???";*//*20100110*/
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  /*background: url(../images/button_bg.gif) repeat-y center;*//*20100110*/
+  background:#F3F3F3;
+  padding: 8px 5px 8px 15px;
+  margin-left:20px;
+}
+#vertnav li li a:hover {
+  color: #900;
+  background-color:#FFF;
+}
+
+/*?1/2|??Y(C)?Menu*/
+#vertnav2{
+  list-style: none;
+  margin: 0px;
+  padding:0px;
+}
+#vertnav2 li {
+  display: inline;
+  margin:0px;
+  padding:0px;}
+#vertnav2 li a{
+  display: block;
+  background: url(../images/icom_menu_a01.gif) no-repeat 5px 15px;
+  width: 122px;
+  margin: 0px;
+  padding: 8px 5px 8px 15px;
+  border-bottom: 1px dotted #848484;
+  text-decoration: none;
+  text-align: left;
+  font-size: 15px;
+  font-variant: normal;
+  line-height: 120%;
+  letter-spacing: 0.06em;
+  color: #900;
+}
+
+#vertnav2 li a:hover{
+  color:#369;
+}
+
+
+#vertnav2 li ul{margin:0px; padding:0px;}
+#vertnav2 li li{margin:0px; padding:0px; display:inline;}
+#vertnav2 li li a{
+  display: block;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #0F7797;
+  width: 122px;
+  font-size: 13px;
+  border-bottom:1px dotted #DBDBDB;
+  text-align: left;
+  margin:0px;
+  padding: 8px 0 8px 25px;
+  background: url(../images/icom_menu_a02.gif) no-repeat 15px 12px;
+}
+
+#vertnav2 li li a:hover{
+  color: #C60;
+}

@@ -1,0 +1,78 @@
+@charset "UTF-8";/*縮圖瀏覽*/
+
+.thumbnail { clear:both;margin:0 0 20px;}
+/*-----------------------以 ul li 排*/
+.thumbnail>ul { list-style: none;margin:0 0 0 5px;padding:10px 0;overflow:hidden;width:100%;line-height:100%;}
+.thumbnail>ul>li {
+  float: left;
+  padding: 9px 0 6px;
+  margin: 0 10px 15px;
+  text-align: center;
+  width: 212px;
+  height: 225px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, .3) 0 1px 4px;
+  list-style: none none;
+  background: #F3F3F3;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+.thumbnail li .image { display:block;margin:0 10px 5px;width:190px;height:130px;overflow:hidden;border:1px solid #aaa;}
+.thumbnail li .image img { margin:0;padding:0;}
+.thumbnail li p { width:190px;margin:5px 10px 3px;padding:0;text-align: left;line-height:150%;height:4.5em;overflow:hidden;}
+.thumbnail li a {
+  text-decoration: none;
+  color: #069;
+}
+.thumbnail ul ul { list-style:none;margin:0 10px;padding:6px 0 0;border-top:1px dotted #bbb;text-align:left;font-size:.92em;line-height:110%;color:#888;}
+.thumbnail ul ul li { margin:0;padding:0;}
+.thumbnail ul ul li em { color:#333;}
+.thumbnail ul ul li.date { margin-left:0;}
+.thumbnail ul ul li.date em, .thumbnail ul ul li.count em { font-family:Arial, Helvetica, sans-serif;letter-spacing:0;}
+/*------照片縮圖瀏覽*/
+.thumbnail.photos ul ul { position:relative;}
+.thumbnail.photos ul ul li.date { position:absolute;left:0;}
+.thumbnail.photos ul ul li.count { position:absolute;right:0;}
+.thumbnail.photos li .image:hover { border:1px solid #000;}
+.thumbnail.photos li .image img {
+  min-width: 190px;
+  max-width: 220px;
+  max-height: 315px;
+  border-style: none;
+}
+.thumbnail.photos ul ul li.date { margin-left:0;letter-spacing:0;font-family: Arial, Helvetica, sans-serifl;}
+
+
+
+.hpTb {}
+.hpTb table { width: 100%; border-collapse:collapse;}
+.hpTb table td {
+  text-align: center;
+  padding: 10px 13px;
+  border-bottom: 1px dotted #DDDDDD;
+  vertical-align: top;
+  width: 25%;
+}
+.hpTb table td h3 {
+  font-size: 95%;
+  line-height: 160%;
+  background: none;
+  margin: 5px auto 0px;
+  padding: 0px;
+  border-style: none;
+  width: 180px;
+}
+.hpTb table td h3 a {
+  color: #069;
+  text-decoration: none;
+}
+.hpTb table td .image {
+  min-height: 180px;
+}
+.hpTb table td .image img {
+  max-width: 180px;
+  max-height: 180px;
+}
+.hpTb table td .image a img { border: 1px solid #9CC; }
