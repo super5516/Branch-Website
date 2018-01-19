@@ -115,3 +115,7 @@ div.Centertop img {display: none;}
   text-decoration: none;
   color: black;
 }
+
+.news, .slider, .func, .traffic {
+  height: 400px;
+}
