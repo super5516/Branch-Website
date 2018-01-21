@@ -362,9 +362,11 @@
               <script>
                 $(function () {
                   $("div.newsRun").replaceWith("");
-                  $(".tabgroup").children().eq(0).children().eq(1).children().eq(1).appendTo(".flex-about-news");
-                  $(".tabgroup").children().eq(1).children().eq(1).children().eq(1).appendTo(".flex-about-auction");
-                  $(".tabgroup").children().eq(2).children().eq(1).children().eq(1).appendTo(".flex-about-auction");
+                  $(".tabgroup").find("ul").eq(0).appendTo(".flex-about-news");
+                  $(".tabgroup").find("ul").eq(1).appendTo(".flex-about-auction");
+                  $(".tabgroup").find("ul").eq(2).appendTo(".flex-about-auction");
+
+                  
 
                   $("div.flex-slide").click(function () {
                     $(this).addClass("flex-slide-active");
