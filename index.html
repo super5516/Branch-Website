@@ -257,8 +257,7 @@
                 <a href="lp.asp?ctNode=13678&amp;CtUnit=18703&amp;BaseDSD=7&amp;mp=031" title="動產拍賣公告(另開新視窗)" target="_nwGip">動產拍賣公告</a>
               </li>
               <li>
-                <a href="http://www.tpk.moj.gov.tw/lp.asp?CtNode=42805&amp;CtUnit=17370&amp;BaseDSD=7&amp;mp=030" title="獎勵檢舉(另開新視窗)"
-                  target="_nwGip">獎勵檢舉</a>
+                <a href="http://www.tpk.moj.gov.tw/lp.asp?CtNode=42805&amp;CtUnit=17370&amp;BaseDSD=7&amp;mp=030" title="獎勵檢舉(另開新視窗)" target="_nwGip">獎勵檢舉</a>
               </li>
             </ul>
           </li>
@@ -416,30 +415,53 @@
               </script>
               <div id="" xmlns="">
                 <div class="newsRun h">
-                  <marquee width="975px" behavior="scroll" onmouseover="this.stop()" onfocus="this.stop()" onmouseout="this.start()"
-                    onblur="this.start()" height="22" direction="left" scrolldelay="10" scrollamount="3" style="height: 22px; width: 975px;">
+                  <marquee width="975px" behavior="scroll" onmouseover="this.stop()" onfocus="this.stop()" onmouseout="this.start()" onblur="this.start()"
+                    height="22" direction="left" scrolldelay="10" scrollamount="3" style="height: 22px; width: 975px;">
                     <ul style="display: inline;">
                     </ul>
                   </marquee>
                 </div>
               </div>
-              
-              <div class="container-fluid">
-                <div class="row news" style="background-color:blueviolet">
+
+              <script>
+                $(function() {
+                  $("#new-body").prependTo("body");
+                  $(".TopLink_center").find("a").slice(1).appendTo(".web-map").addClass("mx-1");
+                });
+              </script>
+
+              <div class="container-fluid" id="new-body">
+                <div class="row justify-content-center title block-1">
+                  <div class="col-5">
+                    <h1>法務部行政執行署台北分署</h1>
+                  </div>
+                  <div class="col-4">
+                    <div class="row web-map"></div>
+                    <div class="row"></div>
+                  </div>
+                </div>
+                <div class="row navbar block-2">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row slider" style="background-color:white">
+                <div class="row news block-1">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row func" style="background-color:blueviolet">
+                <div class="row slider block-2">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row traffic" style="background-color:white">
+                <div class="row help block-1">
                   <div class="col"></div>
                   <div class="col"></div>
+                </div>
+                <div class="row contact block-2">
+                  <div class="col"></div>
+                  <div class="col"></div>
+                </div>
+                <div class="row footer block-1">
+
                 </div>
               </div>
 
@@ -655,8 +677,8 @@
                     </td>
                     <td class="rightblock">
                       <div align="center">
-                        <form id="form1" title="各分署全球資訊網連結" style="MARGIN-BOTTOM: 5px; HEIGHT: 30px; MARGIN-TOP: 10px" method="get"
-                          name="form1" action="">
+                        <form id="form1" title="各分署全球資訊網連結" style="MARGIN-BOTTOM: 5px; HEIGHT: 30px; MARGIN-TOP: 10px" method="get" name="form1"
+                          action="">
                           <select onchange="window.open(this.value)" onkeypress="window.open(this.value)" id="jumpMenu" title="各分署全球資訊網連結" style="WIDTH: 190px"
                             name="jumpMenu">
                             <option selected="">==各分署全球資訊網連結==</option>
@@ -965,8 +987,7 @@
     <div class="Bottommiddle" xmlns="">
       <div id="Bottom">
         <p class="MsoNormal" align="center">地址：10457 臺北市中山區南京東路二段1號&nbsp;&nbsp;
-          <a title="交通資訊(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=372297&amp;CtNode=6165&amp;mp=031"
-            target="_gipNW">交通資訊</a>&nbsp;&nbsp;&nbsp; 電話：(02)2521-6555&nbsp;機關服務時間：上午9:00-12:30下午13:30-17:00。
+          <a title="交通資訊(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=372297&amp;CtNode=6165&amp;mp=031" target="_gipNW">交通資訊</a>&nbsp;&nbsp;&nbsp; 電話：(02)2521-6555&nbsp;機關服務時間：上午9:00-12:30下午13:30-17:00。
           <br>本網站全部圖文係屬法務部行政執行署臺北分署，非經機關正式書面同意，不得將全部或部分內容，轉載於任何形式媒體。
           <br>Copyrights 2017. 版權所有，轉載必究。&nbsp;建議使用IE 9.0 以上版本或Google Chrome最新版本　最佳觀看解析度1440x900&nbsp;
           <br>
@@ -974,16 +995,14 @@
           <!--?xml:namespace prefix = "o" /-->
           <o:p>
             <a title="無障礙網站" href="http://www.handicap-free.nat.gov.tw/Applications/Detail?category=20160804171717">
-              <img border="0" alt="通過A+優先等級無障礙網頁檢測" src="https://www.moj.gov.tw/site/moj/public/MMO/tpy/aplus.jpg" width="88"
-                height="31">
+              <img border="0" alt="通過A+優先等級無障礙網頁檢測" src="https://www.moj.gov.tw/site/moj/public/MMO/tpy/aplus.jpg" width="88" height="31">
             </a>&nbsp;&nbsp;&nbsp;&nbsp;
             <b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;
             <a title="民意信箱(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=386520&amp;CtNode=40399&amp;mp=031">
               <strong>民意信箱</strong>
             </a>&nbsp;&nbsp;&nbsp;
             <b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a title="隱私權宣告(另開視窗)" href="https://www.moj.gov.tw/ct.asp?xItem=28285&amp;CtNode=27589"
-              target="_gipNW">
+            <a title="隱私權宣告(另開視窗)" href="https://www.moj.gov.tw/ct.asp?xItem=28285&amp;CtNode=27589" target="_gipNW">
               <b title="隱私權宣告(另開視窗)" target="_gipNW">隱私權保護宣告</b>
             </a> &nbsp;&nbsp;
             <b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -991,8 +1010,7 @@
               <b title="資訊安全政策(另開視窗)" target="_gipNW">資訊安全政策宣告</b>
             </a> &nbsp;&nbsp;
             <b>|</b>&nbsp;&nbsp;&nbsp;
-            <a title="資料開放宣告(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=426708&amp;ctNode=42690"
-              target="_gipNW">
+            <a title="資料開放宣告(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=426708&amp;ctNode=42690" target="_gipNW">
               <b title="資料開放宣告(另開視窗)" target="_gipNW">資料開放宣告</b>
             </a>
           </o:p>
