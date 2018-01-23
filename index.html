@@ -427,6 +427,10 @@
                 $(function() {
                   $("#new-body").prependTo("body");
                   $(".TopLink_center").find("a").slice(1).appendTo(".web-map").addClass("mx-1");
+                  $(".search-btn").click(function() {
+                    var query = encodeURI("http://www.tpy.moj.gov.tw/bbssp.asp?xdurl=search/GSSForm.asp&mp=031&keyword=") + encodeURI($(".search-text").value);
+                    window.open(query, "_self");
+                  })
                 });
               </script>
 
@@ -436,31 +440,45 @@
                     <h1>法務部行政執行署台北分署</h1>
                   </div>
                   <div class="col-4">
-                    <div class="row web-map"></div>
-                    <div class="row"></div>
+                    <div class="row web-map justify-content-between mb-1"></div>
+                    <div class="row customed-search">
+                      <div class="col-5 container">
+                        <div class="font-size form-group px-0">
+                          <span>瀏覽字體</span>
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-light" onclick="setActiveStyleSheet('size1'); return false;">小</button>
+                            <button type="button" class="btn btn-sm btn-outline-light" onclick="setActiveStyleSheet('size2'); return false;">中</button>
+                            <button type="button" class="btn btn-sm btn-outline-light" onclick="setActiveStyleSheet('size3'); return false;">大</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container col-7">
+                          <form class="form-inline">
+                            <input class="form-control-sm search-text" type="search" placeholder="全站搜尋" >
+                            <button class="btn btn-sm btn-primary search-btn" type="summit">搜尋</button>
+                          </form>
+                        </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row navbar block-2">
+                
+                <div class="row news block-2">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row news block-1">
+                <div class="row slider block-1">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row slider block-2">
+                <div class="row help block-2">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row help block-1">
+                <div class="row contact block-1">
                   <div class="col"></div>
                   <div class="col"></div>
                 </div>
-                <div class="row contact block-2">
-                  <div class="col"></div>
-                  <div class="col"></div>
-                </div>
-                <div class="row footer block-1">
+                <div class="row footer block-2">
 
                 </div>
               </div>
