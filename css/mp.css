@@ -21,8 +21,12 @@ body {
   height: 40px;
   width: 40px;
 }
+
 .block-1, .block-2 {
   height: 400px;
+}
+.title {
+  height: 200px;
 }
 .block-1 {
   background-color: blueviolet;
