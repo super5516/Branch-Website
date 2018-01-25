@@ -361,7 +361,7 @@
               <script>
                 $(function () {
                   $("div.newsRun").replaceWith("");
-                  $(".tabgroup").find("ul").eq(0).appendTo(".flex-about-news");
+                  
                   $(".tabgroup").find("ul").eq(1).appendTo(".flex-about-auction");
                   $(".tabgroup").find("ul").eq(2).appendTo(".flex-about-auction");
 
@@ -426,19 +426,27 @@
               <script>
                 $(function() {
                   $("#new-body").prependTo("body");
+                  
+                  /* title block */
                   $(".TopLink_center").find("a").slice(1).appendTo(".web-map").addClass("mx-1");
                   $(".search-btn").click(function() {
                     var query = encodeURI("http://www.tpy.moj.gov.tw/bbssp.asp?xdurl=search/GSSForm.asp&mp=031&keyword=") + encodeURI($(".search-text").value);
                     window.open(query, "_self");
                   })
                   $("li.haschild").removeClass().addClass("nav-item dropdown").appendTo("ul.nav");
-                  console.log($("mlmenu").children("ul").children("li"));
-                  $(".mlmenu").children("ul").children("li").addClass("nav-item").appendTo("ul.nav");
+                  $(".mlmenu").children("ul").children("li").addClass("nav-item").appendTo("ul.nav").children("a").addClass("nav-link");
                   $("li.dropdown").children("a").removeClass().addClass("nav-link dropdown-toggle").attr({
                     "data-toggle" : "dropdown",
                     href : "#"
                   }).children("span").remove();
                   $("li.dropdown ul").removeClass().removeAttr("style").addClass("dropdown-menu").children("li").addClass("dropdown-item");
+                  
+                  /* news block */
+                  $(".tabgroup").find("ul").eq(0).children("li").each(function() {
+                    $(this).children().wrapAll("<div class='list-group-item'></div>");
+                    $(this).children().appendTo(".news > .col-6 > .list-group");
+                  });
+                  
                 });
               </script>
 
@@ -470,17 +478,23 @@
                   </div>
                   <div class="w-100"></div>
                   <div class="col-9">
-                    <nav class="navbar navbar-default navbar-light bg-light">
+                    <nav class="navbar bg-light">
                       <div class="container-fluid">
                         <ul class="nav"></ul>
                       </div>
                     </nav>
                   </div>
                 </div>
-                
-                <div class="row news block-2">
-                  <div class="col"></div>
-                  <div class="col"></div>
+                <div class="row justify-content-center news block-2">
+                  <div class="col-3">
+                    <div class="row align-content-center">
+                        <div class="h1">最新消息</div>
+                    </div>
+                    
+                  </div>
+                  <div class="col-6">
+                    <div class="list-group list-group-flush"></div>
+                  </div>
                 </div>
                 <div class="row slider block-1">
                   <div class="col"></div>

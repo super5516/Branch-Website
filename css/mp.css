@@ -37,3 +37,9 @@ body {
 .web-map a {
   color: black;
 }
+.nav-link {
+  padding: .5rem .7rem !important;
+}
+.date {
+  float: right;
+}
