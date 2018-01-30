@@ -358,15 +358,16 @@
                 crossorigin="anonymous">
               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
                 crossorigin="anonymous"></script>
+              <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
               <script>
                 $(function () {
                   $("div.newsRun").replaceWith("");
-                  
-                  
+
+
 
                   $("table.clearMp01").hide(0);
 
-                  
+
                 })
               </script>
               <div id="" xmlns="">
@@ -380,31 +381,31 @@
               </div>
 
               <script>
-                $(function() {
+                $(function () {
                   $("#new-body").prependTo("body");
-                  
+
                   /* title block */
                   $(".TopLink_center").find("a").slice(1).appendTo(".web-map").addClass("mx-1");
-                  $(".search-btn").click(function() {
+                  $(".search-btn").click(function () {
                     var query = encodeURI("http://www.tpy.moj.gov.tw/bbssp.asp?xdurl=search/GSSForm.asp&mp=031&keyword=") + encodeURI($(".search-text").value);
                     window.open(query, "_self");
                   })
                   $("li.haschild").removeClass().addClass("nav-item dropdown").appendTo("ul.nav");
                   $(".mlmenu").children("ul").children("li").addClass("nav-item").appendTo("ul.nav").children("a").addClass("nav-link");
                   $("li.dropdown").children("a").removeClass().addClass("nav-link dropdown-toggle").attr({
-                    "data-toggle" : "dropdown",
-                    href : "#"
+                    "data-toggle": "dropdown",
+                    href: "#"
                   }).children("span").remove();
                   $("li.dropdown ul").removeClass().removeAttr("style").addClass("dropdown-menu").children("li").addClass("dropdown-item");
-                  
+
                   /* news block */
-                  $(".tabgroup").find("ul").eq(0).children("li").each(function() {
+                  $(".tabgroup").find("ul").eq(0).children("li").each(function () {
                     $(this).children().wrapAll("<div class='list-group-item'></div>");
                     $(this).children().appendTo(".news > .col-6 > .list-group");
                   });
-                  
+
                   /* ad-slider block */
-                  for(i = 0; i < $(".flex-viewport").find("img").length; i++) {
+                  for (i = 0; i < $(".flex-viewport").find("img").length; i++) {
                     $(".flex-viewport").find("img").eq(i).appendTo($(".carousel-item").eq(i));
                   }
                 });
@@ -430,7 +431,7 @@
                       </div>
                       <div class="col-7">
                         <form class="form-inline">
-                          <input class="form-control-sm search-text" type="search" placeholder="全站搜尋" >
+                          <input class="form-control-sm search-text" type="search" placeholder="全站搜尋">
                           <button class="btn btn-sm btn-primary search-btn" type="summit">搜尋</button>
                         </form>
                       </div>
@@ -497,14 +498,31 @@
                   </div>
                 </div>
                 <div class="row justify-content-center help block-2">
-                  <div class="col-3">繳費方式</div>
-                  <div class="col-3">拍賣消息</div>
-                  <div class="col-3">常用連結</div>
+                  <div class="col-3 m-3">
+                    <div class="row justify-content-center">
+                      <span class="fas fa-dollar-sign fa-3x"></span>
+                      <div class="h1">繳費方式</div>
+                    </div>
+                    <div class="row"></div>
+                  </div>
+                  <div class="col-3 m-3">
+                    <div class="row justify-content-center">
+                      <span class="fas fa-bullhorn fa-3x"></span>
+                      <div class="h1">拍賣公告</div>
+                    </div>
+                    <div class="row"></div>
+                  </div>
+                  <div class="col-3 m-3">
+                    <div class="row justify-content-center">
+                      <span class="fas fa-question-circle fa-3x"></span>
+                      <div class="h1">常用連結</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="row justify-content-center contact block-1">
                   <div class="col-6 d-flex">
                     <iframe class="map align-self-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4629555749243!2d121.52556886190862!3d25.052293304781156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a966676dea6f%3A0xa0c2b7b32c7b506d!2z5rOV5YuZ6YOo6KGM5pS_5Z-36KGM572y5Y-w5YyX5YiG572y!5e0!3m2!1szh-TW!2stw!4v1489983163799"
-                                title="Google 地圖" frameborder="1" allowfullscreen=""></iframe>
+                      title="Google 地圖" frameborder="1" allowfullscreen=""></iframe>
                   </div>
                   <div class="col-3 align-self-center">
                     <div class="row justify-content-center align-content-center">
