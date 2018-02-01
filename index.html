@@ -408,6 +408,10 @@
                   for (i = 0; i < $(".flex-viewport").find("img").length; i++) {
                     $(".flex-viewport").find("img").eq(i).appendTo($(".carousel-item").eq(i));
                   }
+
+                  /* site-map block */
+                  console.log($(".sildeCtrl > ul > li").children("a"));
+                  $(".sildeCtrl > ul > li").children("a")
                 });
               </script>
 
@@ -449,6 +453,7 @@
                 <div class="row justify-content-center news block-2">
                   <div class="col-3 d-flex justify-content-center">
                     <div class="row align-content-center">
+                      <span class="far fa-newspaper fa-3x mr-3"></span>
                       <div class="h1">最新消息</div>
                     </div>
                   </div>
@@ -457,7 +462,7 @@
                   </div>
                 </div>
                 <div class="row justify-content-center slider block-1">
-                  <div class="col-6 d-flex justify-content-center">
+                  <div class="col d-flex justify-content-center">
                     <div id="ad-slider" class="carousel slide align-self-center" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#ad-slider" data-slide-to="0" class="active"></li>
@@ -491,30 +496,34 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-3 d-flex justify-content-center">
-                    <div class="row align-content-center">
-                      <div class="h1">焦點新聞</div>
-                    </div>
-                  </div>
                 </div>
                 <div class="row justify-content-center help block-2">
                   <div class="col-3 m-3">
                     <div class="row justify-content-center">
-                      <span class="fas fa-dollar-sign fa-3x"></span>
+                      <span class="fas fa-dollar-sign fa-3x mr-3"></span>
                       <div class="h1">繳費方式</div>
                     </div>
                     <div class="row"></div>
                   </div>
                   <div class="col-3 m-3">
                     <div class="row justify-content-center">
-                      <span class="fas fa-bullhorn fa-3x"></span>
+                      <span class="fas fa-bullhorn fa-3x mr-3"></span>
                       <div class="h1">拍賣公告</div>
                     </div>
-                    <div class="row"></div>
+                    <div class="row justify-content-center mt-5">
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="far fa-building fa-3x"></span>
+                        <div class="h2">不動產拍賣</div>
+                      </button>
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-car fa-3x"></span>
+                        <div class="h2">動產拍賣</div>
+                      </button>
+                    </div>
                   </div>
                   <div class="col-3 m-3">
                     <div class="row justify-content-center">
-                      <span class="fas fa-question-circle fa-3x"></span>
+                      <span class="fas fa-link fa-3x mr-3"></span>
                       <div class="h1">常用連結</div>
                     </div>
                   </div>
@@ -526,6 +535,7 @@
                   </div>
                   <div class="col-3 align-self-center">
                     <div class="row justify-content-center align-content-center">
+                      <span class="far fa-question-circle fa-3x mr-3"></span>
                       <div class="h1">聯絡我們</div>
                     </div>
                     <div class="row justify-content-center align-content-center">
