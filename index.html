@@ -411,7 +411,10 @@
 
                   /* site-map block */
                   console.log($(".sildeCtrl > ul > li").children("a"));
-                  $(".sildeCtrl > ul > li").children("a")
+                  var site_map_len = $(".sildeCtrl > ul > li").children("a").length;
+                  var site_map_col = (length / 2) + (length % 2);
+                  var site_map_row = 2;
+                  
                 });
               </script>
 
