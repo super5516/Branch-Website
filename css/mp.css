@@ -51,3 +51,11 @@ body {
 .web-map, .customed-search {
   height: 50%;
 }
+.site-map {
+  min-height: 200px;
+}
+.site-map-btn {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
