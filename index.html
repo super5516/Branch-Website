@@ -415,21 +415,22 @@
                   var site_map_row = 2;
                   var site_map_col = Math.ceil(site_map_len / site_map_row);
                   for (i = 0; i < site_map_row; i++) {
-                    $(".site-map > div").append("<div class='row'></div>");
+                    $(".site-map-content").append("<div class='row my-3'></div>");
                   }
                   for (i = 0; i < site_map_col; i++) {
-                    $(".site-map > div > div").slice(1).append("<div class='col'></div>");
+                    $(".site-map-content > div").append("<div class='col'></div>");
                   }
                   var site_map_titles = $(".sildeCtrl > ul > li").children("a");
                   var site_map_list = $(".sildeCtrl > ul > li").children("ul").addClass("list-unstyled");
                   for (i = 0; i < site_map_len; i++) {
-                    $(".site-map > div > div").slice(1).find(".col").eq(i).append(site_map_titles.eq(i).text());
-                    $(".site-map > div > div").slice(1).find(".col").eq(i).append(site_map_list.eq(i));
+                    $(".site-map-content > div").find(".col").eq(i).append(site_map_titles.eq(i).text());
+                    $(".site-map-content > div").find(".col").eq(i).append(site_map_list.eq(i));
                   }
                   /* site-map-btn */
                   site_map_list.hide();
                   $(".site-map-btn").click(function() {
                     site_map_list.slideToggle();
+                    $(this).find("svg").toggleClass("rotate");
                   });
                   
                 });
@@ -578,12 +579,20 @@
                   </div>
                 </div>
                 <div class="row justify-content-center site-map">
-                  <div class="col-9 d-flex-column align-self-center">
-                    <div class="site-map-btn d-flex">
-                      <span class="fas fa-angle-down fa-2x mr-2"></span>
-                      <div class="align-self-center">展開</div>
+                  <div class="col-9">
+                    <div class="row">
+                      <div class="site-map-btn d-flex">
+                        <span class="fas fa-angle-down fa-2x mr-2"></span>
+                        <div class="align-self-center">展開</div>
+                      </div>
+                    </div>
+                    <div class="row h-100 align-content-center">
+                      <div class="col site-map-content">
+                        
+                      </div>
                     </div>
                   </div>
+                  
                 </div>
                 <div class="row footer block-1">
 
