@@ -83,21 +83,18 @@ body {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: transform 0.5s linear;
-  -moz-transition: transform  0.5s linear;
-  -o-transition: transform  0.5s linear;
-  transition: transform 0.5s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all  1s linear;
+  -o-transition: all  1s linear;
+  transition: all 1s linear;
 }
 .fa-angle-down.rotate {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  -webkit-transition: transform 0.5s linear;
-  -moz-transition: transform  0.5s linear;
-  -o-transition: transform  0.5s linear;
-  transition: transform 0.5s linear;
-  /*-webkit-animation: rotate 0.25s linear forwards;
-  -moz-animation: rotate 0.25s linear forwards;
-  animation: rotate 0.25s linear forwards;*/
+  -webkit-transition: all 1s linear;
+  -moz-transition: all  1s linear;
+  -o-transition: all  1s linear;
+  transition: all 1s linear;
 }

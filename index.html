@@ -410,7 +410,6 @@
                   }
 
                   /* site-map block */
-                  console.log($(".sildeCtrl > ul > li").children("a"));
                   var site_map_len = $(".sildeCtrl > ul > li").children("a").length;
                   var site_map_row = 2;
                   var site_map_col = Math.ceil(site_map_len / site_map_row);
@@ -432,7 +431,8 @@
                     site_map_list.slideToggle();
                     $(this).find("svg").toggleClass("rotate");
                   });
-                  
+
+                  /* https://stackoverflow.com/questions/31108800/css-animation-toggle-rotate-on-click/31108952 */
                 });
               </script>
 
@@ -595,7 +595,13 @@
                   
                 </div>
                 <div class="row footer block-1">
-
+                  <div class="col">
+                    <div class="row">
+                      10457 臺北市中山區南京東路二段1號<b>｜</b>(02)2521-6555<b>｜</b>上午9:00-12:30及下午13:30-17:00
+                    </div>
+                    <!--https://tutorialzine.com/2016/10/freebie-5-fantastic-bootstrap-footers-->
+                    <div class="row"></div>
+                  </div>
                 </div>
               </div>
 
