@@ -10,12 +10,34 @@ body {
 }
 /*#all { display: none; }*/
 
+.left-block {
+  width: 50%;
+  float: left;
+}
+.right-block {
+  width: 50%;
+  float: right;
+}
+.footer-btn {
+  padding: 0;
+  border: solid 1px;
+  border-radius: 5px;
+  margin: 0px 5px;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+}
+
 /* customized css here */
 
 .sildeCtrl-btn {
   position: relative;
   left: 850px;
   top: 0px;
+}
+
+.title-logo {
+  width: 80px;
 }
 .contact-logo {
   height: 40px;

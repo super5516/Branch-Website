@@ -11,7 +11,7 @@
   <link href="css/fontSizeM.css" rel="alternate stylesheet" type="text/css" title="size2" disabled="">
   <link href="css/fontSizeL.css" rel="alternate stylesheet" type="text/css" title="size3" disabled="">
   <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
-  <script type="text/javascript" src="xslGip/unit031/css/activeAD.js"></script>
+  <script type="text/javascript" src="css/activeAD.js"></script>
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/styleswitcher.js"></script>
   <script type="text/javascript" src="js/multimenu.js"></script>
@@ -351,7 +351,7 @@
               <img src="xslGip/unit031/images/center_topleft.gif" alt="*">
             </div>
             <div class="Centermiddle">
-              <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+              <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
                 crossorigin="anonymous"></script>
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -359,87 +359,103 @@
               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
                 crossorigin="anonymous"></script>
               <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-              <script>
-                $(function () {
-                  $("div.newsRun").replaceWith("");
-
-
-
-                  $("table.clearMp01").hide(0);
-
-
-                })
-              </script>
-              <div id="" xmlns="">
-                <div class="newsRun h">
-                  <marquee width="975px" behavior="scroll" onmouseover="this.stop()" onfocus="this.stop()" onmouseout="this.start()" onblur="this.start()"
-                    height="22" direction="left" scrolldelay="10" scrollamount="3" style="height: 22px; width: 975px;">
-                    <ul style="display: inline;">
-                    </ul>
-                  </marquee>
-                </div>
-              </div>
-
-              <script>
-                $(function () {
-                  $("#new-body").prependTo("body");
-
-                  /* title block */
-                  $(".TopLink_center").find("a").slice(1).appendTo(".web-map").addClass("mx-1");
-                  $(".search-btn").click(function () {
-                    var query = encodeURI("http://www.tpy.moj.gov.tw/bbssp.asp?xdurl=search/GSSForm.asp&mp=031&keyword=") + encodeURI($(".search-text").value);
-                    window.open(query, "_self");
-                  })
-                  $("li.haschild").removeClass().addClass("nav-item dropdown").appendTo("ul.nav");
-                  $(".mlmenu").children("ul").children("li").addClass("nav-item").appendTo("ul.nav").children("a").addClass("nav-link");
-                  $("li.dropdown").children("a").removeClass().addClass("nav-link dropdown-toggle").attr({
-                    "data-toggle": "dropdown",
-                    href: "#"
-                  }).children("span").remove();
-                  $("li.dropdown ul").removeClass().removeAttr("style").addClass("dropdown-menu").children("li").addClass("dropdown-item");
-
-                  /* news block */
-                  $(".tabgroup").find("ul").eq(0).children("li").each(function () {
-                    $(this).children().wrapAll("<div class='list-group-item'></div>");
-                    $(this).children().appendTo(".news > .col-6 > .list-group");
-                  });
-
-                  /* ad-slider block */
-                  for (i = 0; i < $(".flex-viewport").find("img").length; i++) {
-                    $(".flex-viewport").find("img").eq(i).appendTo($(".carousel-item").eq(i));
-                  }
-
-                  /* site-map block */
-                  var site_map_len = $(".sildeCtrl > ul > li").children("a").length;
-                  var site_map_row = 2;
-                  var site_map_col = Math.ceil(site_map_len / site_map_row);
-                  for (i = 0; i < site_map_row; i++) {
-                    $(".site-map-content").append("<div class='row my-3'></div>");
-                  }
-                  for (i = 0; i < site_map_col; i++) {
-                    $(".site-map-content > div").append("<div class='col'></div>");
-                  }
-                  var site_map_titles = $(".sildeCtrl > ul > li").children("a");
-                  var site_map_list = $(".sildeCtrl > ul > li").children("ul").addClass("list-unstyled");
-                  for (i = 0; i < site_map_len; i++) {
-                    $(".site-map-content > div").find(".col").eq(i).append(site_map_titles.eq(i).text());
-                    $(".site-map-content > div").find(".col").eq(i).append(site_map_list.eq(i));
-                  }
-                  /* site-map-btn */
-                  site_map_list.hide();
-                  $(".site-map-btn").click(function() {
-                    site_map_list.slideToggle();
-                    $(this).find("svg").toggleClass("rotate");
-                  });
-
-                  /* https://stackoverflow.com/questions/31108800/css-animation-toggle-rotate-on-click/31108952 */
-                });
-              </script>
 
               <div class="container-fluid" id="new-body">
+                <script>
+                  $(function () {
+                    console.log($("head > script"));
+                    console.log($("head > script").eq(3));
+                    $("head > script").eq(3).remove();
+                    $("head > script").eq(5).remove();
+                    $("head > script").eq(9).remove();
+
+                    $("div.Centermiddle").find("script").slice(0, 4).appendTo("head");
+
+                    /* title block */
+                    $(".TopLink_center").find("a").slice(1).appendTo(".web-map").addClass("mx-1");
+                    $(".search-btn").click(function () {
+                      var query = encodeURI("http://www.tpy.moj.gov.tw/bbssp.asp?xdurl=search/GSSForm.asp&mp=031&keyword=") + encodeURI($(".search-text").value);
+                      window.open(query, "_self");
+                    });
+                    var nav_btns = $("li.haschild");
+                    nav_btns.attr({
+                      class: "nav-item dropdown"
+                    });
+                    nav_btns.children("a").attr({
+                      class: "nav-link dropdown-toggle",
+                      "data-toggle": "dropdown",
+                      href: "#"
+                    });
+                    nav_btns.children("ul").attr({
+                      class: "dropdown-menu",
+                      style: ""
+                    });
+                    nav_btns.children("span").remove();
+                    /*nav_btns.children("ul").removeClass();
+                    nav_btns.children("ul").removeAttr("style");
+                    nav_btns.children("ul").addClass("dropdown-menu");*/
+                    nav_btns.children("ul").children("li").addClass("dropdown-item");
+                    $("ul.nav").append(nav_btns);
+
+                    /* news block */
+                    $(".tabgroup").find("ul").eq(0).children("li").each(function () {
+                      $(this).children().wrapAll("<div class='list-group-item'></div>");
+                      $(this).children().appendTo(".news > .col-6 > .list-group");
+                    });
+
+                    /* ad-slider block */
+                    var ad_length = $(".carousel-item").length;
+                    for (i = 0; i < ad_length; i++) {
+                      $(".flexslider").find("img").eq(0).appendTo($(".carousel-item").eq(i));
+                    }
+
+                    /* site-map block */
+                    var site_map_len = $(".sildeCtrl > ul > li").children("a").length;
+                    var site_map_row = 2;
+                    var site_map_col = Math.ceil(site_map_len / site_map_row);
+                    for (i = 0; i < site_map_row; i++) {
+                      $(".site-map-content").append("<div class='row my-3'></div>");
+                    }
+                    for (i = 0; i < site_map_col; i++) {
+                      $(".site-map-content > div").append("<div class='col'></div>");
+                    }
+                    var site_map_titles = $(".sildeCtrl > ul > li").children("a");
+                    var site_map_list = $(".sildeCtrl > ul > li").children("ul").addClass("list-unstyled");
+                    for (i = 0; i < site_map_len; i++) {
+                      $(".site-map-content > div").find(".col").eq(i).append(site_map_titles.eq(i).text());
+                      $(".site-map-content > div").find(".col").eq(i).append(site_map_list.eq(i));
+                    }
+                    /* site-map-btn */
+                    site_map_list.hide();
+                    $(".site-map-btn").click(function () {
+                      site_map_list.slideToggle();
+                      $(this).find("svg").toggleClass("rotate");
+                    });
+
+                    /* https://stackoverflow.com/questions/31108800/css-animation-toggle-rotate-on-click/31108952 */
+
+                    /* footer block */
+                    var footer_btn = $("div#Bottom").find("a").slice(3, 6);
+                    var traffic_info = $("div#Bottom").find("a").first().addClass("btn btn-outline-light ml-2");
+                    var handicap_btn = $("div#Bottom").find("a").eq(1);
+                    footer_btn.addClass("btn btn-outline-light btn-sm");
+                    handicap_btn.addClass("align-self-center").find("img").addClass("mx-1");
+                    $("div.footer > .col-4").find(".btn-group").append(footer_btn);
+                    $("div.footer > .col-4").find(".row").eq(2).append(handicap_btn);
+                    $("div.footer").find(".row").eq(0).append(traffic_info);
+
+                    $("#all").hide();
+                    $("#new-body").prependTo("body");
+                  });
+                </script>
                 <div class="row justify-content-center title block-1">
                   <div class="col-5 d-flex">
-                    <h1 class="align-self-center">法務部行政執行署台北分署</h1>
+                    <div class="media align-self-center">
+                      <img class="title-logo" src="http://www.tpy.moj.gov.tw/site/moj/public/MMO/tpy/11.png" alt="">
+                      <div class="media-body w-100">
+                        <h1>法務部行政執行署台北分署</h1>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-4">
                     <div class="row web-map justify-content-between align-content-center"></div>
@@ -472,8 +488,8 @@
                   </div>
                 </div>
                 <div class="row justify-content-center news block-2">
-                  <div class="col-3 d-flex justify-content-center">
-                    <div class="row align-content-center">
+                  <div class="col-3 d-flex justify-content-center align-self-center">
+                    <div class="row">
                       <span class="far fa-newspaper fa-3x mr-3"></span>
                       <div class="h1">最新消息</div>
                     </div>
@@ -517,22 +533,31 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-3 d-flex justify-content-center">
-                    <div class="row align-content-center">
+                  <div class="col-3 d-flex justify-content-center align-self-center">
+                    <div class="row">
                       <span class="fas fa-balance-scale fa-3x mr-3"></span>
                       <div class="h1">焦點資訊</div>
                     </div>
                   </div>
                 </div>
                 <div class="row justify-content-center help block-2">
-                  <div class="col-3 m-3">
+                  <div class="col-3 my-3 mx-5">
                     <div class="row justify-content-center">
                       <span class="fas fa-dollar-sign fa-3x mr-3"></span>
-                      <div class="h1">繳費方式</div>
+                      <div class="h1">繳款資訊</div>
                     </div>
-                    <div class="row"></div>
+                    <div class="row justify-content-center mt-5">
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="far fa-credit-card fa-3x"></span>
+                        <div class="h2">繳款方式</div>
+                      </button>
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-file-alt fa-3x"></span>
+                        <div class="h2">認識傳繳通知單</div>
+                      </button>
+                    </div>
                   </div>
-                  <div class="col-3 m-3">
+                  <div class="col-3 my-3 mx-5">
                     <div class="row justify-content-center">
                       <span class="fas fa-bullhorn fa-3x mr-3"></span>
                       <div class="h1">拍賣公告</div>
@@ -548,33 +573,42 @@
                       </button>
                     </div>
                   </div>
-                  <div class="col-3 m-3">
-                    <div class="row justify-content-center">
-                      <span class="fas fa-link fa-3x mr-3"></span>
-                      <div class="h1">常用連結</div>
-                    </div>
-                  </div>
                 </div>
-                <div class="row justify-content-center contact block-1">
-                  <div class="col-6 d-flex">
-                    <iframe class="map align-self-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4629555749243!2d121.52556886190862!3d25.052293304781156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a966676dea6f%3A0xa0c2b7b32c7b506d!2z5rOV5YuZ6YOo6KGM5pS_5Z-36KGM572y5Y-w5YyX5YiG572y!5e0!3m2!1szh-TW!2stw!4v1489983163799"
-                      title="Google 地圖" frameborder="1" allowfullscreen=""></iframe>
+                <div class="row justify-content-center link block-1">
+                  <div class="col-3 align-self-center">
+                    <div class="row">
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-download fa-3x"></span>
+                        <div class="h2">移送書表下載</div>
+                      </button>
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-download fa-3x"></span>
+                        <div class="h2">申請書表下載</div>
+                      </button>
+                    </div>
                   </div>
                   <div class="col-3 align-self-center">
-                    <div class="row justify-content-center align-content-center">
-                      <span class="far fa-question-circle fa-3x mr-3"></span>
-                      <div class="h1">聯絡我們</div>
+                    <div class="row">
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-id-badge fa-3x"></span>
+                        <div class="h2">獎勵檢舉公告</div>
+                      </button>
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-list-ol fa-3x"></span>
+                        <div class="h2">宣導文件</div>
+                      </button>
                     </div>
-                    <div class="row justify-content-center align-content-center">
-                      <a href="https://www.facebook.com/%E6%B3%95%E5%8B%99%E9%83%A8%E8%A1%8C%E6%94%BF%E5%9F%B7%E8%A1%8C%E7%BD%B2%E8%87%BA%E5%8C%97%E5%88%86%E7%BD%B2-1839598709699021/">
-                        <img class="contact-logo mx-1" src="img/facebook.svg" alt="">
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCyYJgvc5_maOE3WSWv9f4Zw">
-                        <img class="contact-logo mx-1" src="img/youtube.svg" alt="">
-                      </a>
-                      <a href="https://line.me/ti/p/@uuz8185d">
-                        <img class="contact-logo mx-1" src="img/line.svg" alt="">
-                      </a>
+                  </div>
+                  <div class="col-3 align-self-center">
+                    <div class="row">
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="fas fa-globe fa-3x"></span>
+                        <div class="h2">相關網站</div>
+                      </button>
+                      <button class="btn btn-outline-dark btn-block">
+                        <span class="far fa-question-circle fa-3x"></span>
+                        <div class="h2">常見問題</div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -588,19 +622,51 @@
                     </div>
                     <div class="row h-100 align-content-center">
                       <div class="col site-map-content">
-                        
                       </div>
                     </div>
                   </div>
-                  
                 </div>
-                <div class="row footer block-1">
-                  <div class="col">
+                <div class="row justify-content-center contact footer block-1">
+                  <div class="col-5 d-flex-column align-self-center">
                     <div class="row">
-                      10457 臺北市中山區南京東路二段1號<b>｜</b>(02)2521-6555<b>｜</b>上午9:00-12:30及下午13:30-17:00
+                      <span class="fas fa-map-marker fa-2x mr-3 mb-3"></span>
+                      <div class="h4">10457臺北市中山區南京東路二段1號</div>
                     </div>
-                    <!--https://tutorialzine.com/2016/10/freebie-5-fantastic-bootstrap-footers-->
-                    <div class="row"></div>
+                    <div class="row">
+                      <span class="fas fa-phone fa-2x mr-2 mb-3"></span>
+                      <div class="h4">(02)2521-6555</div>
+                    </div>
+                    <div class="row">
+                      <span class="fas fa-clock fa-2x mr-2 mb-3"></span>
+                      <div class="h4">上午9:00-12:30下午13:30-17:00</div>
+                    </div>
+                  </div>
+                  <div class="col-4 align-self-center">
+                    <div class="row justify-content-center mb-3">
+                      <div class="h1">法務部行政執行署
+                        <br>台北分署</div>
+                    </div>
+                    <div class="row justify-content-center mb-3">
+                      <div class="btn-group"></div>
+                    </div>
+                    <div class="row justify-content-center mb-3">
+                      <a href="https://www.facebook.com/%E6%B3%95%E5%8B%99%E9%83%A8%E8%A1%8C%E6%94%BF%E5%9F%B7%E8%A1%8C%E7%BD%B2%E8%87%BA%E5%8C%97%E5%88%86%E7%BD%B2-1839598709699021/">
+                        <img class="contact-logo mx-1" src="img/facebook.svg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCyYJgvc5_maOE3WSWv9f4Zw">
+                        <img class="contact-logo mx-1" src="img/youtube.svg" alt="">
+                      </a>
+                      <a href="https://line.me/ti/p/@uuz8185d">
+                        <img class="contact-logo mx-1" src="img/line.svg" alt="">
+                      </a>
+                      <a href="http://www.tpy.moj.gov.tw/ct.asp?xItem=386520&amp;CtNode=40399&amp;mp=031">
+                        <img class="contact-logo mx-1" src="img/gmail-1.svg" alt="">
+                      </a>
+                      <!-- google map -->
+                      <a href="https://goo.gl/maps/4KxaBWvjuTK2">
+                        <img class="contact-logo mx-1" src="img/maps.svg" alt="">
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -914,21 +980,6 @@
         </tr>
       </tbody>
     </table>
-    <script>
-      $(function () {
-        $(".sildeCtrl").children().children().each(function () {
-          $(this).children().eq(1).hide(0);
-        });
-        $(".Bottomtop img, .Bottombottom img").hide(0);
-
-        $(".sildeCtrl-btn").click(function () {
-          $(".sildeCtrl").children().children().each(function () {
-            $(this).children().eq(1).toggle("slow");
-          });
-        });
-
-      });
-    </script>
     <div class="sildeCtrl" xmlns="">
       <div class="btn btn-primary sildeCtrl-btn">展開</div>
       <ul>
@@ -1126,35 +1177,49 @@
     </div>
     <div class="Bottommiddle" xmlns="">
       <div id="Bottom">
-        <p class="MsoNormal" align="center">地址：10457 臺北市中山區南京東路二段1號&nbsp;&nbsp;
-          <a title="交通資訊(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=372297&amp;CtNode=6165&amp;mp=031" target="_gipNW">交通資訊</a>&nbsp;&nbsp;&nbsp; 電話：(02)2521-6555&nbsp;機關服務時間：上午9:00-12:30下午13:30-17:00。
-          <br>本網站全部圖文係屬法務部行政執行署臺北分署，非經機關正式書面同意，不得將全部或部分內容，轉載於任何形式媒體。
-          <br>Copyrights 2017. 版權所有，轉載必究。&nbsp;建議使用IE 9.0 以上版本或Google Chrome最新版本　最佳觀看解析度1440x900&nbsp;
-          <br>
-          <br>
-          <!--?xml:namespace prefix = "o" /-->
-          <o:p>
-            <a title="無障礙網站" href="http://www.handicap-free.nat.gov.tw/Applications/Detail?category=20160804171717">
-              <img border="0" alt="通過A+優先等級無障礙網頁檢測" src="https://www.moj.gov.tw/site/moj/public/MMO/tpy/aplus.jpg" width="88" height="31">
-            </a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a title="民意信箱(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=386520&amp;CtNode=40399&amp;mp=031">
-              <strong>民意信箱</strong>
-            </a>&nbsp;&nbsp;&nbsp;
-            <b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a title="隱私權宣告(另開視窗)" href="https://www.moj.gov.tw/ct.asp?xItem=28285&amp;CtNode=27589" target="_gipNW">
-              <b title="隱私權宣告(另開視窗)" target="_gipNW">隱私權保護宣告</b>
-            </a> &nbsp;&nbsp;
-            <b>|</b>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a title="資訊安全政策宣告(另開視窗)" href="https://www.moj.gov.tw/np.asp?ctNode=27458" target="_gipNW">
-              <b title="資訊安全政策(另開視窗)" target="_gipNW">資訊安全政策宣告</b>
-            </a> &nbsp;&nbsp;
-            <b>|</b>&nbsp;&nbsp;&nbsp;
-            <a title="資料開放宣告(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=426708&amp;ctNode=42690" target="_gipNW">
-              <b title="資料開放宣告(另開視窗)" target="_gipNW">資料開放宣告</b>
-            </a>
-          </o:p>
-        </p>
+        <style>.left-block {
+            width: 50%;
+            float: left;
+          }
+          .right-block {
+            width: 50%;
+            float: right;
+          }
+          .footer-btn {
+            padding: 0;
+            border: solid 1px;
+            border-radius: 5px;
+            margin: 0px 5px;
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+          }</style>
+        <div class="left-block">
+          <p>地址：10457 臺北市中山區南京東路二段1號
+            <a title="交通資訊(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=372297&amp;CtNode=6165&amp;mp=031"
+            target="_gipNW">交通資訊</a>
+          </p>
+          <p>電話：(02)2521-6555</p>
+          <p>機關服務時間：上午9:00-12:30下午13:30-17:00，中午不休息</p>
+        </div>
+        <div class="right-block">
+          <a title="民意信箱(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=386520&amp;CtNode=40399&amp;mp=031" class="footer-btn">
+            <strong>民意信箱</strong>
+          </a>
+          <a title="隱私權宣告(另開視窗)" href="https://www.moj.gov.tw/ct.asp?xItem=28285&amp;CtNode=27589" target="_gipNW" class="footer-btn">
+            <b title="隱私權宣告(另開視窗)" target="_gipNW">隱私權保護宣告</b>
+          </a>
+          <a title="資訊安全政策宣告(另開視窗)" href="https://www.moj.gov.tw/np.asp?ctNode=27458" target="_gipNW" class="footer-btn">
+            <b title="資訊安全政策(另開視窗)" target="_gipNW">資訊安全政策宣告</b>
+          </a>
+          <a title="資料開放宣告(另開視窗)" href="http://www.tpy.moj.gov.tw/ct.asp?xItem=426708&amp;ctNode=42690" target="_gipNW" class="footer-btn">
+            <b title="資料開放宣告(另開視窗)" target="_gipNW">資料開放宣告</b>
+          </a>
+          <a title="無障礙網站" href="http://www.handicap-free.nat.gov.tw/Applications/Detail?category=20160804171717">
+            <img alt="通過A+優先等級無障礙網頁檢測" src="https://www.moj.gov.tw/site/moj/public/MMO/tpy/aplus.jpg" width="88" border="0"
+              height="31">
+          </a>
+        </div>
         <div id="Counter">來訪人次：
           <span>1001631</span>
         </div>
